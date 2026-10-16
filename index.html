@@ -33,8 +33,14 @@ function listar() {
   ul.innerHTML = "";
   tarefas.forEach((t, i) => {
     ul.innerHTML += `<li>${t}
-  <button onclick="editar(${i})">Editar</button></li>`;
+      <button onclick="editar(${i})">Editar</button>
+      <button onclick="excluir(${i})">Excluir</button></li>`;
   });
+}
+
+function excluir(i) {
+  tarefas.splice(i, 1);
+  salvar();
 }
 
 listar();
