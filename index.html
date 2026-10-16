@@ -23,11 +23,17 @@ function criar() {
   salvar();
 }
 
+function editar(i) {
+  const novo = prompt("Editar tarefa:", tarefas[i]);
+  if (novo) { tarefas[i] = novo; salvar(); }
+}
+
 function listar() {
   const ul = document.getElementById("lista");
   ul.innerHTML = "";
   tarefas.forEach((t, i) => {
-    ul.innerHTML += `<li>${t}</li>`;
+    ul.innerHTML += `<li>${t}
+  <button onclick="editar(${i})">Editar</button></li>`;
   });
 }
 
