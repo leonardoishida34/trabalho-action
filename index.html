@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="UTF-8"><title>CRUD de Tarefas</title></head>
+<body>
+  <h1>Tarefas</h1>
+  <input id="texto" placeholder="Nova tarefa">
+  <button onclick="criar()">Adicionar</button>
+  <ul id="lista"></ul>
+
+<script>
+let tarefas = JSON.parse(localStorage.getItem("tarefas")) || [];
+
+function salvar() {
+  localStorage.setItem("tarefas", JSON.stringify(tarefas));
+  listar();
+}
+
+function criar() {
+  const t = document.getElementById("texto");
+  if (!t.value) return;
+  tarefas.push(t.value);
+  t.value = "";
+  salvar();
+}
+
+function listar() {
+  const ul = document.getElementById("lista");
+  ul.innerHTML = "";
+  tarefas.forEach((t, i) => {
+    ul.innerHTML += `<li>${t}</li>`;
+  });
+}
+
+listar();
+</script>
+</body>
+</html>
