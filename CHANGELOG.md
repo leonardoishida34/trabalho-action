@@ -1,5 +1,6 @@
 # Changelog
 
+- README explicativo com changelog, release e deploy (55ce3a3) - 2026-10-29
 - altera titulo (32f3618) - 2026-10-29
 - adiciona deploy automatico na VM (ef3cbc9) - 2026-10-29
 - docs: adiciona README (5d4cc7d) - 2026-10-22
