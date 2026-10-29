@@ -1,5 +1,6 @@
 # Changelog
 
+- altera titulo (32f3618) - 2026-10-29
 - adiciona deploy automatico na VM (ef3cbc9) - 2026-10-29
 - docs: adiciona README (5d4cc7d) - 2026-10-22
 - Merge branch 'main' of https://github.com/leonardoishida34/trabalho-action (0e9869e) - 2026-10-15
